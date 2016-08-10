@@ -1,9 +1,9 @@
 package de.codepitbull.karaf.testbundle;
 
 import de.codepitbull.karaf.testservicebundle.ProvidedService;
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Reference;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 
 @Component
 public class ConsumingComponent {

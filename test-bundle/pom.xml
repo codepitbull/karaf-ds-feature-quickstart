@@ -21,6 +21,9 @@
     -->
 
     <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <javax.ws.rs-api.version>2.0.1</javax.ws.rs-api.version>
+    </properties>
     <parent>
         <groupId>de.codepitbull.karaf</groupId>
         <artifactId>test-parent</artifactId>
@@ -41,17 +44,17 @@
             <artifactId>org.osgi.core</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.cmpn</artifactId>
+        </dependency>
+        <dependency>
             <groupId>de.codepitbull.karaf</groupId>
             <artifactId>test-service-bundle</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
-            <version>2.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr.annotations</artifactId>
+            <version>${javax.ws.rs-api.version}</version>
         </dependency>
     </dependencies>
 
@@ -74,19 +77,6 @@
                         </Import-Package>
                     </instructions>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-scr-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>generate-scr-scrdescriptor</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>scr</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

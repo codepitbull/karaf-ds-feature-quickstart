@@ -1,10 +1,8 @@
 package de.codepitbull.karaf.testservicebundle;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Service;
+import org.osgi.service.component.annotations.Component;
 
-@Component
-@Service
+@Component(service = ProvidedService.class)
 public class ProvidedServiceImpl implements ProvidedService{
     public String hello() {
         return "world";
