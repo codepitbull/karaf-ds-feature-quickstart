@@ -16,19 +16,19 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+<features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
     <repository>mvn:org.apache.cxf.dosgi/cxf-dosgi/1.8.0/xml/features</repository>
-    <feature name="stuff" description='${project.name}' version='${project.version}' install='auto'>
-        <feature prerequisite="true">scr</feature>
-        <feature prerequisite="true">cxf</feature>
-        <feature prerequisite="true">cxf-jaxrs</feature>
-        <feature prerequisite="true">http</feature>
-        <feature prerequisite="true">http-whiteboard</feature>
-        <feature prerequisite="true">cxf-dosgi-provider-cxf</feature>
+    <feature name="required-features" description='${project.name}' version='${project.version}' install='auto'>
+        <feature>scr</feature>
+        <feature>cxf</feature>
+        <feature>cxf-jaxrs</feature>
+        <feature>http</feature>
+        <feature>http-whiteboard</feature>
+        <feature>cxf-dosgi-provider-cxf</feature>
     </feature>
 
     <feature name='${project.artifactId}' description='${project.name}' version='${project.version}' install='auto'>
         <details>${project.description}</details>
-        <feature prerequisite="true">stuff</feature>
+        <feature prerequisite="true">required-features</feature>
     </feature>
 </features>

@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Component(name="HelloWorldRest", immediate = true)
+@Component(name="HelloWorldRest")
 @Service(HelloWorldRest.class)
 @Properties({
         @Property(name = "service.exported.interfaces", value = "*"),
@@ -15,7 +15,6 @@ import javax.ws.rs.core.MediaType;
         @Property(name = "org.apache.cxf.rs.address", value = "/rester")
 })
 @Produces(MediaType.TEXT_PLAIN)
-@Path("")
 public class HelloWorldRest {
     @GET
     @Path("/")

@@ -6,8 +6,8 @@
         <feature prerequisite="false" dependency="false">cxf-jaxrs</feature>
         <feature prerequisite="false" dependency="false">http</feature>
         <feature prerequisite="false" dependency="false">http-whiteboard</feature>
+        <feature prerequisite="false" dependency="false">required-features</feature>
         <feature prerequisite="false" dependency="false">scr</feature>
-        <feature prerequisite="false" dependency="false">stuff</feature>
         <bundle>mvn:de.codepitbull.karaf/test-bundle/1.0.0-SNAPSHOT</bundle>
         <bundle>mvn:de.codepitbull.karaf/test-service-bundle/1.0.0-SNAPSHOT</bundle>
         <bundle>mvn:javax.ws.rs/javax.ws.rs-api/2.0.1</bundle>
